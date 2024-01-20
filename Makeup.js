@@ -16,7 +16,8 @@ window.onscroll = () => {
 // Dark Mode / light mode
 let darkmode = document.querySelector("#darkmode");
 
-darkmode.onclick = () => {
+darkmode.addEventListener("click", () => {
+  console.log("dark");
   if (darkmode.classList.contains("bx-moon")) {
     darkmode.classList.replace("bx-moon", "bx-sun");
     document.body.classList.add("active");
@@ -24,4 +25,4 @@ darkmode.onclick = () => {
     darkmode.classList.replace("bx-sun", "bx-moon");
     document.body.classList.remove("active");
   }
-};
+});
